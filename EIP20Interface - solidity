@@ -1,0 +1,19 @@
+pragma solidity ^0.4.20;
+
+contract EIP20Interface {
+
+    uint256 public totalSupply;  ///total amount of tokens
+
+    function balanceOf(address /*owner*/) public view returns (uint256 balance);
+
+    function transfer(address /*to send address*/, uint256 /*value*/) public returns (bool success);
+
+    function transferFrom(address /*from addres*/, address /*to send address*/, uint256 /*value*/) public returns (bool success);
+
+    function approve(address /*spender*/, uint256 /*value*/) public returns (bool success);
+
+    function allowance(address /*owner*/, address /*spender*/) public view returns (uint256 remaining);
+
+    event Transfer(address indexed /*from address*/, address indexed /*to send address*/, uint256 /*value*/);
+    event Approval(address indexed /*owner*/, address indexed /*spender*/, uint256/*value*/);
+}
